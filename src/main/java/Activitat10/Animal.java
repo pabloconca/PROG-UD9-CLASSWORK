@@ -53,4 +53,12 @@ abstract public class Animal {
     public void aparearCon(Animal animal){
 
     }
+    @Override
+    public boolean equals(Object o){
+        if (!(o instanceof Animal)){
+            return false;
+        }
+        Animal otroAnimal = ((Animal) o);
+        return this.vacunado == (otroAnimal.vacunado);
+    }
 }
